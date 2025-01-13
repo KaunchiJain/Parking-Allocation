@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Slot Recommendation</title>
+    <style>
+        
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111111; 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #222222; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; 
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Green header */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.result-box {
+    width: 100%;
+    padding: 20px;
+    background-color: #333333; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-box p {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.result-image-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.result-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.error {
+    background-color: #f44336;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.back-button {
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parking Slot Recommendation</h1>
+        <div class="result">
+            <h3>Recommended Parking Slot:</h3>
+            <img src="{{ image_url }}" alt="Processed Image">
+            <p>We recommend parking at the location highlighted in the image above. It's free!</p>
+        </div>
+        <a href="/" class="back-btn">Back to Upload</a>
+    </div>
+</body>
+</html>
